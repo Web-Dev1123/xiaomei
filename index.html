@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>小美客服系统</title>
+		<meta name="keywords" content="在线客服系统，在线客服软件，网站客服软件，网站客服系统，客服系统，客服软件，网页客服系统，网页客服软件，小美客服">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="./resource/initialize.css">
+		<link rel="stylesheet" type="text/css" href="./resource/header.css">
+		<link rel="stylesheet" type="text/css" href="./resource/index.css">
+		<link rel="stylesheet" type="text/css" href="./resource/footer.css">
+		<script src="./resource/hm.js.download"></script><script async="" charset="UTF-8" id="MKEFU_WEBPLUGIN" src="./resource/mkefu.min.js.download"></script><script src="./resource/jquery-3.3.1.js.download" type="text/javascript" charset="utf-8"></script>
+		<meta http-equiv="mobile-agent" content="format=xhtml;url=/m/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/m";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+	<style type="text/css">#MKEFU-INVITE-MSG.HIDE{display:none!important;}#MKEFU-INVITE-BTN.HIDE{display:none!important;}#MKEFU-INVITE-MSG *{box-sizing: border-box;outline: none;}#MKEFU-INVITE-BTN *{box-sizing: border-box;outline: none;}#MKEFU-INVITE *{box-sizing: border-box;outline: none;}#MKEFU-INVITE-MSG {position: fixed;z-index: 9999;overflow: hidden;display:none;visibility: hidden;background-color: transparent;box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);border: 1px solid #eee\0;*border: 1px solid #eee;}#MKEFU-INVITE-MSG.WINDOW-CENTER{position: fixed;top:0px;right:0px;bottom:0px;left: 0px;margin: auto;}#MKEFU-INVITE-IFRAME{position: absolute;top: 0;right: 0;bottom: 0;left: 0;width: 100% !important;height: 100% !important;border: 0;padding: 0;margin: 0;float: none;background: none;}#MKEFU-INVITE-BTN{color:#ffffff;font-size: 16px;position: fixed;z-index: 2147483647;cursor:pointer;box-shadow: 0 0 14px 0 rgba(0,0,0,.16);}#MKEFU-INVITE-BTN .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-CLOSE{position: absolute;top: -15px;width: 30px;height: 30px;border: 1px solid #f7f7f7;border-radius: 15px;line-height: 30px;background-color: #fff;box-shadow: 0 4px 10px 0 rgba(0,0,0,.10);cursor: pointer;text-align: center;padding-top: 10px;}#MKEFU-INVITE-BTN .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-CLOSE:hover{background-color: #bbbbbb;}#MKEFU-INVITE-BTN .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-CLOSE.left{right: -15px;}#MKEFU-INVITE-BTN .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-CLOSE.right{left: -15px;}#MKEFU-INVITE-BTN #MKEFU-INVITE-BTN-MESSAGE-NUMBER{position: absolute;top: -13px;display: none;width: 26px;height: 26px;text-align: center;line-height: 26px;font-size: 14px;color: #fff;border-radius: 13px;background-color: #F56C6C;}#MKEFU-INVITE-BTN #MKEFU-INVITE-BTN-MESSAGE-NUMBER.left{right: -13px;}#MKEFU-INVITE-BTN #MKEFU-INVITE-BTN-MESSAGE-NUMBER.right{left: -13px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1{min-width: 300px;height: 40px;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-1{width: 100%;height: 50px;text-align:center;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-1 #MKEFU-INVITE-BTN-MESSAGE-NUMBER.left{left: 18px;right: auto;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-1 #MKEFU-INVITE-BTN-MESSAGE-NUMBER.right{right: 18px;left: auto;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-2{min-height: 200px;width: 50px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2{min-height: 200px;width: 40px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3{height: 60px;width: 60px;border-radius: 30px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-ICON{height: 40px;width: 40px;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-ICON{height: 50px;width: 50px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-TEXT{line-height: 40px;display:inline-block;padding:0 10px;border-left: 1px solid #bbbbbb;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-TEXT{line-height: 50px;border-left: none;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE{position: absolute;display:none;bottom: 64px;width: 260px;height: 100px;border: 1px solid #f7f7f7;border-radius: 4px;color: #000;text-align: left;box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);background-color: #fff;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE{bottom: 74px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.left{left:10px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.right{right:10px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW{position: absolute;bottom: -8px;font-size: 0;line-height: 0;border-width: 10px 8px 0px;border-color: #fff transparent;border-style: solid dashed dashed;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.left{left:12px}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-1 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.right{right:12px}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-ICON{height: 40px;width: 40px;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-ICON{height: 50px;width: 50px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-TEXT{display: block;padding:10px 10px;border-top: 1px solid #bbbbbb;word-break: break-all;word-wrap: break-word;letter-spacing: 6px;text-align: center;}#MKEFU-INVITE-BTN.mobile.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-TEXT{border-top: none;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE{position: absolute;display:none;top: 0px;width: 260px;height: 100px;border: 1px solid #f7f7f7;border-radius: 4px;color: #000;text-align: left;box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);background-color: #fff;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.left{left:64px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.right{right:64px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW{position: absolute;top: 12px;font-size: 0;line-height: 0;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.left{border-width: 8px 10px 8px 0px;border-color:transparent #fff transparent transparent ;border-style: solid;left:-8px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-2 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.right{border-width: 8px 0px 8px 10px;border-color:transparent transparent transparent #fff;border-style: solid;right:-8px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-ICON{height: 60px;width: 60px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-TEXT{display: none;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE{position: absolute;display:none;bottom: 84px;width: 260px;height: 100px;border: 1px solid #f7f7f7;border-radius: 4px;color: #000;text-align: left;box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);background-color: #fff;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.left{left:10px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.right{right:10px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW{position: absolute;bottom: -8px;font-size: 0;line-height: 0;border-width: 10px 8px 0px;border-color: #fff transparent;border-style: solid dashed dashed;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.left{left:12px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-3 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.right{right:12px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-ICON{max-height: 100%;max-width: 100%;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-TEXT{display: none;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE{position: absolute;display:none;top:-124px;width: 260px;height: 100px;border: 1px solid #f7f7f7;border-radius: 4px;color: #000;text-align: left;box-shadow: 0 0 14px 0 rgba(0, 0, 0, .16);background-color: #fff;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.left{left:10px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE.right{right:10px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW{position: absolute;bottom: -8px;font-size: 0;line-height: 0;border-width: 10px 8px 0px;border-color: #fff transparent;border-style: solid dashed dashed;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.left{left:12px;}#MKEFU-INVITE-BTN.MKEFU-INVITE-BTN-4 .MKEFU-INVITE-BTN-MESSAGE-BUBBLE-ARROW.right {right: 12px;}#MKEFU-INVITE-BTN .MKEFU-INVITE-BTN-MESSAGE{margin: 12px 18px;}#MKEFU-INVITE-BTN #MKEFU-INVITE-BTN-MESSAGE-AVATAR{width: 26px;height: 26px;border-radius: 13px;margin-right: 6px;vertical-align: top;box-shadow: 0 0 4px 0 rgba(0,0,0,.1);}#MKEFU-INVITE-BTN #MKEFU-INVITE-BTN-MESSAGE-NAME{display: inline-block;margin-top: 3px;font-size: 16px;color: #000;}#MKEFU-INVITE-BTN #MKEFU-INVITE-BTN-MESSAGE-CONTENT{max-height: 40px;margin-top: 5px;font-size: 14px;overflow: hidden;color: #000;}#MKEFU-INVITE{position: fixed;z-index: 2147483647;background-repeat: no-repeat;cursor:pointer;display:none}#MKEFU-INVITE.WINDOW-CENTER{position: fixed;top:0px;right:0px;bottom:0px;left: 0px;margin: auto;}#MKEFU-INVITE #MKEFU-INVITE-CLOSE{position: absolute;top:-15px;width: 30px;height: 30px;border: 1px solid #f7f7f7;border-radius: 15px;line-height: 30px;background-color: #fff;box-shadow: 0 4px 10px 0 rgba(0,0,0,.10);cursor: pointer;text-align: center;}#MKEFU-INVITE #MKEFU-INVITE-CLOSE.left{right: -15px;}#MKEFU-INVITE #MKEFU-INVITE-CLOSE.center{right: -15px;}#MKEFU-INVITE #MKEFU-INVITE-CLOSE.right{left: -15px;}#MKEFU-INVITE #MKEFU-INVITE-CLOSE:hover{background-color: #bbbbbb;}#MKEFU-INVITE .MKEFU-INVITE-BUBBLE-MESSAGE{margin: 10px 16px;}#MKEFU-INVITE-BUBBLE-MESSAGE-CONTENT{max-height: 80px;font-size: 14px;overflow: hidden;color: #000;}#MKEFU-INVITE.MKEFU-INVITE-TYPE-2{width: 280px;height: 256px;background-size: 280px auto;}#MKEFU-INVITE.MKEFU-INVITE-TYPE-2 .MKEFU-INVITE-TEXT{width: 280px;height: 256px;padding: 15px 40px 0;}#MKEFU-INVITE.MKEFU-INVITE-TYPE-3{width: 324px;height: 144px;background-size: 324px auto;}#MKEFU-INVITE.MKEFU-INVITE-TYPE-3 .MKEFU-INVITE-TEXT{width: 324px;height: 144px;padding: 20px 20px 0px 90px;}#MKEFU-INVITE.MKEFU-INVITE-TYPE-4{width: 318px;height: 133px;background-size: 318px auto;}#MKEFU-INVITE.MKEFU-INVITE-TYPE-4 .MKEFU-INVITE-TEXT{width: 318px;height: 133px;padding:18px;}#MKEFU-INVITE-BTN img{vertical-align: top;}</style></head>
+	<body data-new-gr-c-s-check-loaded="14.1101.0" data-gr-ext-installed="">
+		<div id="noticeId" class="notice-content hide">
+			<div class="notice-close">
+				<img onclick="javascript:document.getElementById(&#39;noticeId&#39;).classList.add(&#39;hide&#39;);" src="./resource/close.png" style="width: 20px;height: 20px;">
+			</div>
+		</div>
+		
+		<div class="lc-zd"></div>
+		<div class="gonggao">
+			<div class="gg-title">公　告</div>
+			<div class="gg-article">
+			【重要提示】使用小美客服系统期间，不得危害国家安全、泄露国家秘密，不得侵犯国家社会集体和公民的合法权益。<br>
+			小美客服系统禁止用于含有木马、病毒、色情、赌博、诈骗、金融、棋牌、刷单、假冒产品、虚假信息等违法违规业务。一经发现，小美科技有权立即停止服务而不需承担任何责任，并协助相关行政执法机关进行清查。<br>
+			投诉电话：18525479522（ 09:00—17:30）
+			</div>
+			<div class="gg-btn">我已阅读</div>
+		</div>
+		<script>
+			$(".gg-btn").click(function(event) {
+				$(".lc-zd").hide();
+				$(".gonggao").slideUp()
+			});
+		</script>
+		<style>
+			.gg-btn{
+			    width: 150px;
+			    height: 40px;
+			    background: #8abcd1;
+			    display: block;
+			    margin: 0 auto 50px;
+			    color: #fff;
+			    line-height: 40px;
+			    text-align: center;
+			    cursor: pointer;
+			}
+			.lc-zd{
+				width: 100%;
+				height: 100vh;
+				background: rgba(0,0,0,0.7);
+				position: fixed;
+				left: 0;
+				top: 0;
+				z-index: 9998;
+				display:none;
+			}
+			.gonggao{
+				width: 700px;
+				/* height: 600px; */
+				background: #fff;
+				position: fixed;
+				transform: translate(-50%,-50%);
+				left: 50%;
+				top: 50%;
+				z-index: 9999;
+				/* box-shadow: 0px 0px 5px 3px #eef5f8; */
+				display:none;
+			}
+			.gg-title{
+				height: 50px;
+			    background: #8abcd1;
+			    line-height: 50px;
+			    text-align: center;
+			    font-size: 16px;
+			    font-weight: bold;
+			    color: #fff;
+			}
+			.gg-article{
+				padding: 50px 30px;
+				line-height: 2;
+				font-size: 16px;
+				text-align: justify;
+			}
+			
+			.hide,HIDE{
+				display:none !important;
+			}
+			.notice-content{
+				background-color:#fff;
+				display:flex;
+				padding:6px 60px;
+			}
+			.notice-body{
+				margin: 0 6px;
+			}
+
+			.notice-close{
+				display:flex;
+				align-items:center;
+				cursor: pointer;
+			}
+			.notice-close:hover{
+				opacity:0.6;
+			}
+					</style>
+		<header>
+			<!-- 通用 -->
+			<div id="hea_bgimg" class="hea_bgimg">
+				<!-- 头部导航 -->
+				
+				<div id="hea_tops" class="wenzi">
+
+					<ul class="dis hea">
+
+						<li>
+
+							<img id="logo" class="logo dis_bl" src="./resource/logo .png" width="258">
+
+
+							<img id="logo2" class="logo dis_no" src="./resource/login_logo.png" width="258">
+
+
+						</li>
+
+						<li class="hea_s">
+
+							<div>
+
+								<ul class="dis hea_top">
+
+									<li class="hea_top_li">
+
+										<a class="hea_top_a hea_top_li_a" href="#">
+
+											首页
+
+										</a>
+
+									</li>
+
+									<li class="hea_top_li dropdown">
+
+			                                <a class=" hea_top_li_a" href="#">产品</a>
+
+			                            </li><li class="hea_top_li dropdown">
+
+			                                <a class=" hea_top_li_a" href="#">案例</a>
+
+			                                <div class="dropdown-content" style="display: none;">
+
+												<ul class="dis">
+
+			                                    
+
+				                                    <a class="xia_bian" href="#">
+
+													<div style="margin: 10px 0;border-right: 1px solid #e3e3e3;">
+
+														<ul>
+
+															<li class="xia_img dropdown-content_l">
+
+																<img src="./resource/saved_resource"></li>
+
+															<li class="xia_name">金融保险</li>
+
+														</ul>
+
+													</div>		
+
+													</a>
+
+			                                    
+
+				                                    <a class="xia_bian" href="#">
+
+													<div style="margin: 10px 0;border-right: 1px solid #e3e3e3;">
+
+														<ul>
+
+															<li class="xia_img dropdown-content_l">
+
+																<img src="#"></li>
+
+															<li class="xia_name">电商行业</li>
+
+														</ul>
+
+													</div>		
+
+													</a>
+
+			                                    
+
+				                                    <a class="xia_bian" href="#">
+
+													<div style="margin: 10px 0;border-right: 1px solid #e3e3e3;">
+
+														<ul>
+
+															<li class="xia_img dropdown-content_l">
+
+																<img src="./resource/saved_resource"></li>
+
+															<li class="xia_name">政府机构</li>
+
+														</ul>
+
+													</div>		
+
+													</a>
+
+			                                    
+
+				                                    <a class="xia_bian" href="#">
+
+													<div style="margin: 10px 0;border-right: 1px solid #e3e3e3;">
+
+														<ul>
+
+															<li class="xia_img dropdown-content_l">
+
+																<img src="./resource/saved_resource"></li>
+
+															<li class="xia_name">文化传媒</li>
+
+														</ul>
+
+													</div>		
+
+													</a>
+
+			                                    
+
+				                                    <a class="xia_bian" href="#">
+
+													<div style="margin: 10px 0;border-right: 1px solid #e3e3e3;">
+
+														<ul>
+
+															<li class="xia_img dropdown-content_l">
+
+																<img src="./resource/saved_resource"></li>
+
+															<li class="xia_name">互联网行业</li>
+
+														</ul>
+
+													</div>		
+
+													</a>
+
+			                                    
+
+				                                    <a class="xia_bian" href="#">
+
+													<div style="margin: 10px 0;border-right: 1px solid #e3e3e3;">
+
+														<ul>
+
+															<li class="xia_img dropdown-content_l">
+
+																<img src="./resource/saved_resource"></li>
+
+															<li class="xia_name">本地生活和O2O</li>
+
+														</ul>
+
+													</div>		
+
+													</a>
+
+			                                    
+
+				                                </ul>
+
+				                            </div>
+
+			                            </li><li class="hea_top_li dropdown">
+
+			                                <a class=" hea_top_li_a" href="#">价格</a>
+
+			                                <div class="dropdown-content" style="display: none;">
+
+												<ul class="dis">
+
+			                                    
+
+				                                </ul>
+
+				                            </div>
+
+			                            </li><li class="hea_top_li dropdown">
+
+			                                <a class=" hea_top_li_a" href="###">下载</a>
+			                            </li><li class="hea_top_li dropdown">
+
+			                                <a class=" hea_top_li_a" href="#">联系</a>
+
+			                            </li>
+
+								</ul>
+
+							</div>
+
+							
+
+						</li>
+
+						<li class="hea_denglu">
+
+							<input class="hea_denglu_input" type="button" name="" id="" value="注册" style="cursor: pointer;" onclick="#">
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<!-- 右侧导航 -->
+
+				<div class="Right_daohang">
+
+					<ul class="Right_kuai">
+
+						<a href="javascript:_MKEFU.openMessageDialog(true);" class="Right_kuai_li">
+
+							<img class="Right_kuai_img" src="./resource/advisory.png"><br>
+
+							在线咨询
+
+						</a>
+
+					</ul>
+
+					<ul class="Right_kuai">
+
+						<li class="Right_kuai_li">
+
+							<img class="Right_kuai_img" src="./resource/phone.png"><br>
+
+							咨询电话
+
+						</li>
+
+					</ul>
+
+					<ul class="Right_kuai">
+
+						<li class="Right_kuai_li">
+
+							<img class="Right_kuai_img" src="./resource/weixin.png"><br>
+
+							关注微信
+
+						</li>
+
+					</ul>
+
+					<ul class="Right_kuai">
+
+						<a href="#" class="Right_kuai_li">
+
+							<img class="Right_kuai_img" src="./resource/QQ.png"><br>
+
+							QQ咨询
+
+						</a>
+
+					</ul>
+
+					<ul class="Right_kuai fh-top" style="margin-top: 0.625rem;">
+
+						<a href="#">
+
+							<li class="Right_kuai_li">
+
+								<img class="Right_kuai_img" src="./resource/fanhui.png"><br>
+
+								返回顶部
+
+							</li>
+
+						</a>
+
+					</ul>
+
+				</div>
+
+
+
+				<div class="Right_daohang_no">
+
+					<ul class="Right_kuai_bottom" style="right: -280px;">
+
+						<li class="Right_kuai_li2">
+
+							<div class="Right_k_o">
+
+								<ul>
+
+									<li><b>解决您的客户服务需求</b></li>
+
+									<li class="Right_k_W">您的需求就是我们的专业</li>
+
+								</ul>
+
+							</div>
+
+						</li>
+
+					</ul>
+
+					<ul class="Right_kuai_bottom" style="right: -280px;">
+
+						<li class="Right_kuai_li2">
+
+							<div class="Right_k_o">
+
+								<ul>
+
+									<li><b>18525479522</b></li>
+
+								</ul>
+
+							</div>
+
+						</li>
+
+					</ul>
+
+					<ul class="Right_kuai_bottom" style="right: -280px;">
+
+						<li class="Right_kuai_li2">
+
+							<div class="Right_k_o">
+
+								<ul>
+
+									<li><img src="./resource/1-20101111260O32.png" style="width:64px;"></li>
+
+
+									
+
+								</ul>
+
+							</div>
+
+						</li> 
+
+					</ul>
+
+					<ul class="Right_kuai_bottom">
+
+						<li class="Right_kuai_li2">
+
+							<div class="Right_k_o">
+
+								<ul>
+
+									<li><b>3352825133，3486282780</b></li>
+
+								</ul>
+
+							</div>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<script>
+
+					//右侧导航
+
+					$('.Right_kuai').hover(function() {
+
+						$('.Right_kuai_bottom').eq($(this).index()).css({"right":"10px"});
+
+					}, function() {
+
+						$('.Right_kuai_bottom').eq($(this).index()).css({"right":"-280px"});
+
+					});
+
+
+
+		            $(window).scroll(function(){
+
+		                if ($(window).scrollTop()>100){
+
+		                    $(".fh-top").fadeIn(1500);
+
+		                } else{
+
+		                    $(".fh-top").fadeOut(1500);
+
+		                }
+
+		            });
+
+					$('.fh-top').click(function(event) {
+
+						$('body,html').animate({scrollTop:0},1000);
+
+                		return false;
+
+					});
+
+
+
+					$('.dropdown').each(function() {
+
+
+
+						if ($(this).children().children().children('a').length > 0) {
+
+							
+
+						}else{
+
+							$(this).children('.dropdown-content').hide()
+
+
+
+						}
+
+					});
+
+					$('.dropdown').eq(1).children('.dropdown-content').hide()
+
+				</script>
+
+				<!-- banner 文字 -->
+				<div class="hea_ban_wen">
+					<ul>
+						<li style="font-size: 48px; color: #FFFFFF;">全场景智能客服系统平台</li>
+						<li>
+							<div>
+								<ul class="dis">
+									<li class="hea_ban_cs1">小客服连接大世界</li>
+									<li class="hea_ban_cs1">新客服连接未来</li>
+								</ul>
+							</div>
+						</li>
+						<li class="hea_ban_cs2" style="margin-top: 30px;">集网站在线客服系统、微信公众号客服系统、微信小程序客服系统、微博客服系统等功能于一身的客服系统</li>
+						<li class="hea_ban_cs2">可实现多渠道对话接入，统一对话窗口，统一客服管理界面</li>
+						<li>
+							<div class="hea_ban_tiyan">
+								<a href="###">免费下载</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section>
+			<!-- zhuti 1 -->
+			<div class="sec_os bg_ee">
+				<ul class="wenzi">
+					<!-- biaoti -->
+					<li>
+						<div>
+							<ul class="src_one_biaoti">
+								<li class="src_one_biaoti_1">提高交易转化率，提升客户满意度</li>
+								<li class="src_one_biaoti_2">极简的使用体验，尊贵的服务态度，我们100%竭诚为您提供最需要的功能</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="sec_one2">
+							<ul class="dis ju_cen">
+								<!-- 板块一 -->
+								<li>
+									<div class="sec_one_a sec_one_m">
+										<ul>
+											<li class="sec_one_a_bt">提升客服效率</li>
+											<li class="sec_one_a_miaoshu">
+												<ul style="color: rgb(51, 51, 51); font-size: 14px; font-family: 微软雅黑; margin: 0px; padding-right: 0px; padding-left: 0px; border: none; text-align: center;">
+	<li class="sec_one_a_miaoshu" style="color: rgb(102, 102, 102); font-size: 16px; list-style: none; margin: 1rem; line-height: 25px;">
+		全渠道一体化工作台，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		不再轮番切换对话界面，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		PC+移动双端工作，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		人机协作，客服工作不再难</li>
+</ul>
+
+											</li>
+											<li class="sec_one_img">
+												<img src="./resource/jian_85.png"></li>
+											
+										</ul>
+									</div>
+								</li><li>
+									<div class="sec_one_a sec_one_m">
+										<ul>
+											<li class="sec_one_a_bt">降低管理成本</li>
+											<li class="sec_one_a_miaoshu">
+												<ul style="color: rgb(51, 51, 51); font-size: 14px; font-family: 微软雅黑; margin: 0px; padding-right: 0px; padding-left: 0px; border: none; text-align: center;">
+	<li class="sec_one_b_miaoshu" style="color: rgb(102, 102, 102); font-size: 16px; list-style: none; margin: 1rem; line-height: 25px;">
+		全局会话实时监控，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		综合多种数据维度报表，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		管理员权限管理，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		一键接入机器人/客服对话，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		轻松管理，全面掌控</li>
+</ul>
+
+											</li>
+											<li class="sec_one_img">
+												<img src="./resource/qian_85.png"></li>
+											
+										</ul>
+									</div>
+								</li><li>
+									<div class="sec_one_a sec_one_m">
+										<ul>
+											<li class="sec_one_a_bt">提升客户满意度</li>
+											<li class="sec_one_a_miaoshu">
+												<ul style="color: rgb(51, 51, 51); font-size: 14px; font-family: 微软雅黑; margin: 0px; padding-right: 0px; padding-left: 0px; border: none; text-align: center;">
+	<li class="sec_one_c_miaoshu" style="color: rgb(102, 102, 102); font-size: 16px; list-style: none; margin: 1rem; line-height: 25px;">
+		机器人+人工+工单+电话<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		四位一体保障客户满意度，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		自动人机转接方式提升机器人<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		工作效率，避免客户流失，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		锁定商机</li>
+</ul>
+
+											</li>
+											<li class="sec_one_img">
+												<img src="./resource/zan_85.png"></li>
+											
+										</ul>
+									</div>
+								</li><li>
+									<div class="sec_one_a sec_one_m">
+										<ul>
+											<li class="sec_one_a_bt">节省人工成本</li>
+											<li class="sec_one_a_miaoshu">
+												<ul style="color: rgb(51, 51, 51); font-size: 14px; font-family: 微软雅黑; margin: 0px; padding-right: 0px; padding-left: 0px; border: none; text-align: center;">
+	<li class="sec_one_d_miaoshu" style="color: rgb(102, 102, 102); font-size: 16px; list-style: none; margin: 1rem; line-height: 25px;">
+		智能机器人快速<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		解决客户问题，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		识别率高达90%以上，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		7X24小时不下线，<br style="color: rgb(51, 51, 51); font-size: 14px;">
+		年节省人工成本可达100000+</li>
+</ul>
+
+											</li>
+											<li class="sec_one_img">
+												<img src="./resource/ren_10.png"></li>
+											
+										</ul>
+									</div>
+								</li>
+								
+								
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- zhuti 2 -->
+			<div>
+				<ul>
+					<!-- two kuai 1-->
+					<li class="bg_bai">
+						<div class="wenzi">
+							<ul class="sec_two dis ju_cen">
+								<li class="sec_two_w sec_two_w_r">
+									<div>
+										<ul>
+											<li class="sec_two_bt">在线客服</li>
+											<li class="sec_two_bt2">
+											快速人机协作模式，全面提升客服工作效率</li>
+
+											<li class="sec_two_miaoshu">
+												PC网站、移动网站、App、<br>
+微信公众号、微信小程序和微博客服对话集成，<br>
+统一对话窗口，统一客服管理界面。<br>
+
+											</li>
+											<a href="#"><li class="sec_two_gengduo">了解更多</li> </a>
+										</ul>
+									</div>
+								</li>
+								<li class="sec_two_img sec_two_w_r"><img src="./resource/1-191114154125554.png"></li>
+							</ul>
+						</div>
+					</li>
+					<!-- two kuai 2-->
+					<li class="bg_ee">
+						<div class="wenzi">
+							<!-- two kuai 1-->
+							<ul class="sec_two dis">
+								<li class="sec_two_img2 sec_two_w_r"><img src="./resource/1-191114154503528.png"></li>
+								<li class="sec_two_w sec_two_w_r">
+									<div>
+										<ul>
+											<li class="sec_two_bt">工单系统</li>
+											<li class="sec_two_bt2">
+											支持不同状态标记，支持全渠道工单建立</li>
+
+											<li class="sec_two_miaoshu">
+												一键快速建立工单<br>
+自定义工单字段<br>
+快速回复处理<br>
+延时性解决方案<br>
+
+											</li>
+											<a href="#"><li class="sec_two_gengduo">了解更多</li> </a>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- two kuai 3-->
+					<li class="bg_bai">
+						<div class="wenzi">
+							<ul class="sec_two dis">
+								
+								<li class="sec_two_w sec_two_w_r">
+									<div>
+										<ul>
+											<li class="sec_two_bt">网页群聊</li>
+											<li class="sec_two_bt2">
+
+											一键式样式设计，个性化页面设置</li>
+
+											<li class="sec_two_miaoshu">
+												客户发起对话即可添加名片<br>
+保存客户信息，方便后续沟通<br>
+积累客户资源<br>
+
+											</li>
+
+											<a href="#"><li class="sec_two_gengduo">了解更多</li> </a>
+										</ul>
+									</div>
+								</li>
+								<li class="sec_two_img sec_two_w_r"><img src="./resource/1-1912111I343422.jpg"></li>
+							</ul>
+						</div>
+					</li>
+					<!-- two kuai 4-->
+					<li class="bg_ee">
+						<div class="wenzi">
+							<!-- two kuai 1-->
+							<ul class="sec_two dis">
+								<li class="sec_two_img2 sec_two_w_r"><img src="./resource/1-191114154521C0.png"></li>
+								<li class="sec_two_w sec_two_w_r">
+									<div>
+										<ul>
+											<li class="sec_two_bt">智能机器人</li>
+											<li class="sec_two_bt2">
+											高效率解决重复性问题，大幅降低人工客服成本</li>
+
+											<li class="sec_two_miaoshu">
+												7×24小时全天在线<br>
+人机协作模式<br>
+知识库自定义及管理<br>
+自主＋监督式学习<br>
+
+											</li>
+											<a href="#"><li class="sec_two_gengduo">了解更多</li> </a>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- zhuti 3 -->
+			<div>
+				<ul>
+					<li class="bg_bai">
+						<div class="wenzi">
+							<ul class="sec_two">
+								<li>
+									<div>
+										<ul class="src_one_biaoti">
+											<li class="src_one_biaoti_1">提高交易转化率，提升客户满意度</li>
+											<li class="src_one_biaoti_2">极简的使用体验，尊贵的服务态度，我们100%竭诚为您提供最需要的功能</li>
+										</ul>
+										<ul class="src_one_sbai">
+											<div class="sec_three_yaun"><img src="./resource/1-191206155421227.jpg" alt=""></div>
+<div class="sec_three_yaun"><img src="./resource/1-1912061554021G.jpg" alt=""></div>
+<div class="sec_three_yaun"><img src="./resource/1-191206155344C1.jpg" alt=""></div>
+<div class="sec_three_yaun"><img src="./resource/1-1912061553015H.jpg" alt=""></div>
+<div class="sec_three_yaun"><img src="./resource/1-191206155241106.jpg" alt=""></div>
+<div class="sec_three_yaun"><img src="./resource/1-191206162345252.jpg" alt=""></div>
+<div class="sec_three_yaun"><img src="./resource/1-191206154P5950.jpg" alt=""></div>
+
+											
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div>
+										<ul class="dis" style="justify-content: center;">
+											<li class="sec_one_demo1">
+												<a href="javascript:_MKEFU.openMessageDialog(true);">
+													<div class="sec_one_de1">
+														了解更多
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<footer>
+			<!-- 通用 -->
+			<div class="src_s">
+				<ul class="wenzi">
+					<li class="src_s_biaoti">立即领取7天全功能免费试用</li>
+					<a href="javascript:_MKEFU.openMessageDialog(true);">
+						<li class="src_s_anniu">立即获取试用账号</li>
+					</a>
+				</ul>
+			</div>
+			<div class="foo_bg">
+				<ul class="wenzi">
+					<!-- 底部导航 -->
+					<li>
+						<div class="foo_nei">
+							<ul class="dis">
+								<li class="foo_one">
+									<div>
+										<ul>
+											<li class="foo_logo"><img src="./resource/bottom_logo.png" width="130"></li>
+
+											<li class="foo_Re"><img src="./resource/1-1910301434100-L.png" style="width:100px;margin: auto; display: block;"></li>
+
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="foo_c dis">
+										<ul class="foo_dao">
+											
+					                            <a href="#"><li class="foo_ti">产品</li></a>
+					                                
+					                                
+					                                    
+					                                    <li class="foo_a"><a href="#" title="在线客服">在线客服</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="工单系统">工单系统</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="网页群聊">网页群聊</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="智能机器人">智能机器人</a></li>
+					                                    
+					                                
+					                            
+					                        
+										</ul><ul class="foo_dao">
+											
+					                            <a href="#"><li class="foo_ti">案例</li></a>
+					                                
+					                                
+					                                    
+					                                    <li class="foo_a"><a href="#" title="金融保险">金融保险</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="电商行业">电商行业</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="政府机构">政府机构</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="文化传媒">文化传媒</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="互联网行业">互联网行业</a></li>
+					                                    
+					                                    <li class="foo_a"><a href="#" title="本地生活和O2O">本地生活和O2O</a></li>
+					                                    
+					                                
+					                            
+					                        
+										</ul><ul class="foo_dao">
+											
+					                            <a href="#"><li class="foo_ti">价格</li></a>
+					                                
+					                                
+					                                    
+					                                
+					                            
+					                        
+										</ul><ul class="foo_dao">
+											
+					                            <a href="###"><li class="foo_ti">下载</li></a>
+					                                    
+					                                
+					                            
+					                        
+										</ul><ul class="foo_dao">
+											
+					                            <a href="#"><li class="foo_ti">联系</li></a>
+					                            
+					                        
+										</ul>
+										
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- 版权 -->
+					<li>
+						<div>
+							<ul>
+								<li style="color: #8ABCD1;text-align: center;padding: 1.5rem 0;">
+									Copyright 大连市小美网络科技技术有限公司 版权所有
+									<span>
+										<a target="_blank" href="#" style="color: #8ABCD1;text-align: center;padding: 1.5rem 2rem;">
+										<a target="_blank" href="#" style="color: #8ABCD1;text-align: center;padding: 1.5rem 2rem;">
+											辽ICP备19018543号-1
+										</a>
+									</span>
+									<span>
+							    	<a target="_blank" href="#">
+								     	<img src="./resource/gonganbeian.png">
+								     	<span style="color:#8ABCD1;">辽公网安备 21021102000889号</span>
+							    	</a>
+							    </span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div style="text-align: center;padding-bottom: 20px;">
+							<a target="cyxyv" href="#"> <img src="./resource/label_sm_90030.png"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</footer>

@@ -1,0 +1,67 @@
+.bank-info-box{
+    line-height: 28px;
+    word-break: break-all;
+}
+.bank-info-box .box-title{
+    border-bottom: 1px dashed;
+    text-align: center;
+    line-height: 42px;
+}
+
+.bank-info-box a{
+    margin-left: 10px;
+    color: #4fb0e7;
+    text-decoration: none;
+    cursor: pointer;
+}
+.bank-info-box a:active {
+    color: #4fb0e7;
+}
+
+.template-info-box{
+    line-height: 28px;
+    word-break: break-all;
+}
+.template-info-box .box-title{
+    border-bottom: 1px dashed;
+    text-align: center;
+    line-height: 42px;
+}
+
+.template-info-box a{
+    margin-left: 10px;
+    color: #4fb0e7;
+    text-decoration: none;
+    cursor: pointer;
+}
+.template-info-box a:active {
+    color: #4fb0e7;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.HIDE{
+    display: none;
+}
+
+.default-color{
+    color:#409EFF
+}
+
+.success-color{
+    color:#67C23A
+}
+
+.warning-color{
+    color:#E6A23C
+}
+
+.danger-color{
+    color:#F56C6C
+}
+
+.info-color{
+    color:#909399
+}

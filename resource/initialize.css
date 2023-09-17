@@ -1,0 +1,72 @@
+/*  初始化文件  */
+*{
+  color:#333;
+  font-size:14px;
+	font-family: "微软雅黑";
+}
+html, body{
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 100%;
+}
+a{
+  text-decoration: none;
+  color:#333;
+}
+ul,ol,p,h1,h2,h3,h4,h5,h6,figure,figcaption,nav,img{
+  margin:0;
+  padding:0;
+  border: none;
+}
+img{vertical-align: bottom;}
+li{list-style: none;}
+.clear{
+  clear: both;
+}
+
+/* 公用 */
+.dis{
+	display: flex;
+}
+
+.dis_no{
+	display: none;
+}
+
+.dis_bl{
+	display: block;
+}
+
+.fixed {  
+    position: fixed;  
+    top: 0;  
+    z-index: 10000;
+	background-color: white;
+	
+}  
+
+.wenzi{
+	width: 1200px;
+	margin: 0 auto;
+	
+}
+
+.ju_cen{
+	justify-content: center;
+}
+
+/* 100% */
+.baifenbai{
+		width: 100%;
+		height: 100%;
+}
+
+/* beijingse  bai*/
+.bg_bai{
+	background-color: white;
+}
+/* beijingse #eef5f8; */
+.bg_ee{
+	background-color: #eef5f8;
+}

@@ -1,0 +1,44 @@
+.foo_bg{
+	background-color: #00435f;	
+}
+
+.foo_nei{
+	/* border: 1px solid red; */
+	padding: 4rem 0;
+	border-bottom: 2px solid #8abcd1;
+}
+
+.foo_one{
+	padding-right: 20%;
+}
+
+.foo_logo{
+	padding: 1rem 0;
+}
+
+/* 二维码 */
+.foo_Re{
+	margin-left: 3%;
+}
+
+.foo_c{
+
+	text-align: center;
+}
+
+.foo_dao{
+	padding-right: 6rem;	
+}
+
+.foo_ti{
+	color: white;
+	padding: 1rem 0;
+}
+
+.foo_a{
+	margin: 0.6rem  0;
+}
+.foo_a a{
+	color: #8ABCD1;
+}
+
